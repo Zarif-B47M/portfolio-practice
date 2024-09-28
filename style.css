@@ -1,0 +1,318 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: #36312e;
+    color: #fde9bc;
+}
+
+header {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    color: #fde9bc;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+ nav {   
+    display: flex; /* Flexbox for alignment */
+    flex-direction: row; /* Row alignment */
+    justify-content: space-between; /* Space between links */
+    align-items: center; /* Vertically center the items */
+    width: 50vw; /* Take 50% of the viewport width */
+    padding: 1rem;
+    position: fixed; /* Keep the nav fixed at the top ???????????????????????????????????????????????*/
+    top: 0;
+    right: 0;
+    background-color: #fde9bc; /* Background color */
+    border-left: 3px solid #987a69;
+    border-bottom: 3px solid #987a69;
+    border-bottom-left-radius: 2rem;
+    z-index: 1000;
+ }
+nav a {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+    align-items: center;
+    padding: 0.5rem;
+    color:#d19d22;
+    margin: 0 1rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a:active {
+    color: #cb8468;
+    padding: 1rem;
+    border-radius: 1rem;
+    border-bottom: 0.5px solid #557580;
+}
+
+@media (max-width: 100vw) {
+    nav {
+        position: absolute;
+        display: contents;
+        justify-content: center;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        border-left: 3px solid #987a69;
+        border-bottom: 3px solid #987a69;
+        border-bottom-left-radius: 2rem;
+        padding: 0.5rem solid;
+        background-color: #fde9bc;
+        border-top: 0.1rem solid #987a69;    
+        transition: opacity 0.5s ease;
+        flex-direction: column;
+        width: 100%;
+        padding: 0.5rem;
+        position: fixed;
+        top: 0;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        font-size: 1.2rem;
+        margin: 0 0.5rem;
+    }
+
+    nav a:hover,
+    nav a:active {
+        padding: 1rem;
+        border-radius: 1rem;
+        border-bottom: 0.5rem solid #557580;
+    }
+
+    nav.hidden {
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+}
+
+@media (min-width: 769px) {
+    nav {
+        width: 50vw;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    nav a {
+        font-size: 1.8rem;
+        margin: 0 1.5rem;
+    }
+}
+
+section {
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: #36312e;
+}
+
+.home .home-content h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span {
+    color: #557580;
+}
+
+.home-content h3 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-content p {
+    font-size: 1.7rem;
+}
+
+.home-img {
+    border-radius: 50%;
+}
+
+.home-img img {
+    position: relative;
+    width: 85vh;
+    border-radius: 10%;
+    box-shadow: 0 0 25px solid #fde9bc;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #fde9bc;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: wheat;
+}
+
+.social-icons a:hover {
+    color: #cb8468;
+    transform: scale(1.3) translateY(-5px);
+    background-color: #fff;
+    box-shadow: 0 0 50px #fde9bc;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: #fde9bc;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #36312e;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #cb8468;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale3d(1.03);
+    background-color: #cb8468;
+    color: #fde9bc;
+    box-shadow: 0 0 25px #fde9bc;
+}
+
+.typing-text {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span {
+    position: relative;
+}
+
+.typing-text span::before {
+    content: "Software Developer";
+    color: #557580;
+    animation: words 20s infinite;
+}
+
+.typing-text span::after {
+    content: "";
+    background-color: #36312e;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid #36312e;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor {
+    to {
+        border-left: 3px solid red;
+    }
+
+}
+
+@keyframes words {
+    0%, 20% {
+        content: "Web Dev";
+    }
+    21%, 40% {
+        content: "C# Expert";
+    }
+    41%, 60% {
+        content: "Web Design";
+    }
+    61%, 80% {
+        content: "You Tuber";
+    }
+    81%, 100% {
+        content: "Marketer";
+    }
+}
+
+@media (max-width: 1000px) {
+    .home {
+        gap: 4rem;
+    }
+}
+
+@media (max-width: 995px) {
+    .home {
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3 {
+        font-size: 2.5rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
